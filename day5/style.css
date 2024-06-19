@@ -58,4 +58,336 @@
     text-transform: uppercase;
 }
 
+.parameter {
+    text-align: right;
+    padding: 10px 0 14px 0;
+}
+span {
+    position: relative;
+    font-size: 9px;
+    color: #606060;
+    line-height: 13px;
+    padding: 0 10px 0 25px;
+}
+span:before {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    display: block;
+    content: '';
+    width: 11px;
+    height: 3px;
+    border-radius: 3px;
+}
+
+.red:before {
+    background: red;
+}
+
+.blue:before {
+    background: blue;
+} 
+.statistic {
+    position: relative;
+    height: 111px; /* 81*/
+    width: 260px;
+    margin: 0 auto;
+    /* border:1px solid #000 */
+}
+.line-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px; 
+    background: #F2F2F2;
+}
+.line-2 {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    height: 1px; 
+    background: #F2F2F2;
+}
+.line-3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    bottom: 0px;  
+    background: #F2F2F2;
+}
+
+
+
+
+
+    svg {
+        position: absolute;
+        top: 130px;
+        left: 20px;
+        right: 0;
+        bottom: 0px;
+    }
+
+    polyline {
+        
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+    }
+
+    .red polyline {
+        stroke: red;
+    }
+
+    .blue polyline {
+        stroke: blue;
+    }
+/* Estilos para las herramientas */
+ .data .tooltip {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+    padding: 8px 6px;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+ .data .tooltip:after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 6px;
+    width: 6px;
+    left: 50%;
+    margin-left: -3px;
+    bottom: -3px;
+    transform: rotate(45deg);
+}
+
+/* Estilos para los puntos */
+ .data [class^="point-"] {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+ .data [class^="point-"]:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+}
+
+ .data .red [class^="point-"],
+ .data .red .tooltip,
+ .data .red .tooltip:after {
+    background: var(--red);
+}
+
+/* Posicionamiento de puntos rojos */
+ .data .red .point-1 {
+    left: 7px;
+    top: 43px;
+}
+
+ .data .red .point-2 {
+    left: 48px;
+    top: 9px;
+}
+
+ .data .red .point-3 {
+    left: 88px;
+    top: 20px;
+}
+
+ .data .red .point-4 {
+    left: 128px;
+    top: 8px;
+}
+
+ .data .red .point-5 {
+    left: 169px;
+    top: 35px;
+}
+
+ .data .red .point-6 {
+    left: 209px;
+    top: 45px;
+}
+
+ .data .red .point-7 {
+    left: 249px;
+    top: 16px;
+}
+
+ .data.blue [class^="point-"],
+ .data.blue .tooltip,
+ .data.blue .tooltip:after {
+    background: var(--blue);
+}
+
+/* Posicionamiento de puntos azules */
+ .data.blue .point-1 {
+    left: 7px;
+    top: 58px;
+}
+
+ .data.blue .point-2 {
+    left: 48px;
+    top: 47px;
+}
+
+ .data.blue .point-3 {
+    left: 88px;
+    top: 62px;
+}
+
+ .data.blue .point-4 {
+    left: 128px;
+    top: 52px;
+}
+
+ .data.blue .point-5 {
+    left: 169px;
+    top: 58px;
+}
+
+ .data.blue .point-6 {
+    left: 209px;
+    top: 71px;
+}
+
+ .data.blue .point-7 {
+    left: 249px;
+    top: 61px;
+}
+
+/* Estilos para los días */
+.card .days {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.card .days .day {
+    display: block;
+    float: left;
+    width: calc(100% / 7);
+    font-size: 9px;
+    color: #949494;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}/*
+    .tooltip {
+        position: absolute;
+        bottom: 13px;
+        left: 50%;
+        transform: translate3d(-50%, 10px, 0);
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 11px;
+        color: #fff;
+        padding: 8px 6px;
+        border-radius: 3px;
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+
+       
+    }
+    .tooltip:after{
+        position: absolute;
+        display: block;
+        content: '';
+        height: 6px;
+        width: 6px;
+        left: 50%;
+        margin-left: -3px;
+        bottom: -3px;
+        transform: rotate(45deg);
+    }
+
+    [class^="point-"] {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        cursor: pointer;
+        z-index: 10;
+
+        &:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+
+    [class^="point-"] .red {
+
+         [class^="point-"], .tooltip, .tooltip:after {
+            background: red;
+        } 
+
+        .point-1 { left: 7px; top: 43px; }
+        .point-2 { left: 48px; top: 9px; }
+        .point-3 { left: 88px; top: 20px; }
+        .point-4 { left: 128px; top: 8px; }
+        .point-5 { left: 169px; top: 35px; }
+        .point-6 { left: 209px; top: 45px; }
+        .point-7 { left: 249px; top: 16px; }
+
+    }
+
+    .blue {
+
+        [class^="point-"], .tooltip, .tooltip:after {
+            background: blue;
+        }
+
+        .point-1 { left: 7px; top: 58px; }
+        .point-2 { left: 48px; top: 47px; }
+        .point-3 { left: 88px; top: 62px; }
+        .point-4 { left: 128px; top: 52px; }
+        .point-5 { left: 169px; top: 58px; }
+        .point-6 { left: 209px; top: 71px; }
+        .point-7 { left: 249px; top: 61px; }
+
+    }  
+
+.days {
+width: 280px;
+margin: 0 auto;
+
+.day {
+    display: block;
+    float: left;
+    width: (100% / 7);
+    font-size: 9px;
+    color: #949494;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+}
+
+
+
+
+
+
+
+
+
 
